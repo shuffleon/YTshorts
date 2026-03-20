@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼츠 일일 운영 대시보드</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="title">
+        <h1>쇼츠 일일 운영 대시보드</h1>
+        <p>매일 채널별 이슈, 후보 주제, 대본, 소스, 편집 구성을 한 페이지에서 관리하는 GitHub Pages용 템플릿</p>
+      </div>
+      <div class="chip">업데이트 날짜: <span data-updated-date></span></div>
+    </div>
+
+    <div class="topnav">
+      <a class="active" href="index.html">전체 대시보드</a>
+      <a href="entertainment.html">연예/방송/화제</a>
+      <a href="global.html">글로벌 트렌드</a>
+      <a href="ranking.html">지식형/랭킹형</a>
+      <a href="pet.html">동물/상품형</a>
+    </div>
+
+    <div class="summary" id="summaryStats"></div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>이 사이트로 할 수 있는 일</h2>
+        <div class="section">
+          <ul class="list">
+            <li>채널별로 매일 주제를 분리해서 확인</li>
+            <li>후보 주제, 최종 주제, 대본, 자막, 화면 구성을 한 번에 정리</li>
+            <li>GitHub Pages로 웹사이트처럼 열람</li>
+            <li>나중에 자동화 붙일 수 있는 구조로 확장</li>
+          </ul>
+        </div>
+        <div class="section notice">
+          처음에는 직접 내용을 수정해도 충분합니다. 익숙해진 뒤 Google Sheets, Notion, API 자동화를 붙이면 됩니다.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>오늘 할 일</h2>
+        <div class="section">
+          <div class="table-like">
+            <div class="head">1단계</div><div>각 채널 페이지를 열어 오늘의 주제 후보 확인</div>
+            <div class="head">2단계</div><div>최종 주제 1개씩 확정</div>
+            <div class="head">3단계</div><div>대본과 자막을 복사해 편집 시작</div>
+            <div class="head">4단계</div><div>업로드 후 성과는 별도 시트로 기록</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>채널별 바로가기</h2>
+      <div class="channel-grid" id="channelGrid"></div>
+    </div>
+
+    <div class="section card">
+      <h2>매일 수정하는 곳</h2>
+      <div class="muted">처음에는 아래 파일 1개만 수정해도 전체 페이지에 반영됩니다.</div>
+      <div class="section">
+        <div class="code-block">assets/data.js</div>
+      </div>
+      <div class="section">
+        <ul class="list">
+          <li>날짜 바꾸기 → <strong>updatedDate</strong></li>
+          <li>채널별 오늘 주제 바꾸기 → <strong>todayTopic</strong></li>
+          <li>후보 주제 바꾸기 → <strong>candidates</strong></li>
+          <li>대본 바꾸기 → <strong>script</strong></li>
+          <li>제목/자막/주의사항 바꾸기 → 각 배열 항목 수정</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-note">이 사이트는 정적 웹사이트라서 서버 없이 GitHub Pages에 바로 올릴 수 있습니다.</div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

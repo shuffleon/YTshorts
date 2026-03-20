@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>쇼츠 채널 페이지</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="title">
+        <h1 id="pageTitle">채널명</h1>
+        <p id="pageSubtitle">설명</p>
+      </div>
+      <div class="chip">업데이트 날짜: <span data-updated-date></span></div>
+    </div>
+
+    <div class="topnav">
+      <a href="index.html">전체 대시보드</a>
+      <a href="entertainment.html" class="">연예/방송/화제</a>
+      <a href="global.html" class="">글로벌 트렌드</a>
+      <a href="ranking.html" class="active">지식형/랭킹형</a>
+      <a href="pet.html" class="">동물/상품형</a>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2>오늘의 브리프</h2>
+        <div class="section badge-row">
+          <div class="chip">오늘 주제: <span id="todayTopic"></span></div>
+          <div class="chip">업로드 우선순위: <span id="uploadPriority"></span></div>
+          <div class="chip">권장 길이: <span id="duration"></span></div>
+        </div>
+
+        <div class="section">
+          <h3>후보 주제</h3>
+          <ul class="list" id="candidates"></ul>
+        </div>
+
+        <div class="section">
+          <h3>최종 선정 이유</h3>
+          <ul class="list" id="finalReason"></ul>
+        </div>
+
+        <div class="section">
+          <h3>핵심 소스 유형</h3>
+          <ul class="list" id="sourceTypes"></ul>
+        </div>
+
+        <div class="section kpi">
+          <div class="mini"><div class="k">클릭 포인트</div><div class="v" id="clickPoint"></div></div>
+          <div class="mini"><div class="k">편집 난이도</div><div class="v" id="editingDifficulty"></div></div>
+          <div class="mini"><div class="k">소스 안정성</div><div class="v" id="sourceStability"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>편집용 구성</h2>
+        <div class="section">
+          <h3>쇼츠 대본</h3>
+          <div class="script-box" id="script"></div>
+        </div>
+
+        <div class="section grid-2">
+          <div>
+            <h3>자막 문구</h3>
+            <ul class="list" id="subtitles"></ul>
+          </div>
+          <div>
+            <h3>화면 구성안</h3>
+            <ul class="list" id="visualPlan"></ul>
+          </div>
+        </div>
+
+        <div class="section grid-2">
+          <div>
+            <h3>제목 후보</h3>
+            <ul class="list" id="titles"></ul>
+          </div>
+          <div>
+            <h3>주의사항</h3>
+            <ul class="list" id="notes"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">매일 수정은 assets/data.js 파일에서 하면 됩니다.</div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/script.js"></script>
+  <script>
+    renderChannelPage('ranking');
+  </script>
+</body>
+</html>
